@@ -2,16 +2,18 @@ const inputText = document.querySelector('#text');
 const addButton = document.querySelector('.add-button');
 const list = document.querySelector('.container ul');
 
+
+// add todo via plus button after task input
 addButton.addEventListener('click', (e)=>{
     if(inputText.value != ""){
         e.preventDefault();
 
-        //create li
+        //create li element that contains task input
         const myLi = document.createElement('li');
         myLi.innerHTML = inputText.value;
         list.appendChild(myLi);
 
-        //create span
+        //create span element that's styled as a delete button
         const mySpan = document.createElement('span');
         mySpan.innerHTML = 'X';
         myLi.appendChild(mySpan);
