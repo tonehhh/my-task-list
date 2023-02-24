@@ -16,11 +16,13 @@ body{
 h1{
     color: rgb(0, 0, 0);
     margin-top: 100px;
+    text-align: center;
 }
 
 h3{
     color:rgb(0, 0, 0);
     margin-top: 5px;
+    text-align: center;
 }
 
 form{
@@ -65,11 +67,21 @@ ul li{
     font-weight: bold;
     padding: 0 5px;
     position: relative;
-    cursor: pointer;
     display: block;
     margin: 7px 0;
     box-shadow: 3px 3px 5px rgb(51, 51, 51);
     transition: 0.5s linear;
+    text-align: center;
+}
+
+.completed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    background-color: black;
 }
 
 ul li span{
@@ -79,5 +91,6 @@ ul li span{
     width: 50px;
     text-align: center;
     font-weight: bolder;
+    cursor: pointer;
     background: rgb(241, 73, 73);
 }
