@@ -54,7 +54,6 @@ form button{
 .container{
     margin-top: 50px;
     min-height: 100%;
-    overflow-y: scroll;
 }
 
 ul{
@@ -116,3 +115,51 @@ footer i{
     color: black;
 }
 
+/* Media queries for different screen sizes */
+
+@media only screen and (max-width: 768px) {
+    /* Responsive styles for screens smaller than 768px (e.g. tablets) */
+    .container {
+      width: 80%;
+    }
+  
+    ul {
+      width: 100%;
+    }
+  
+    ul li {
+      font-size: 16px;
+    }
+  
+    footer {
+      height: 80px;
+    }
+  
+    footer i {
+      font-size: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* Responsive styles for screens smaller than 480px (e.g. mobile phones) */
+    .container {
+      width: 90%;
+    }
+  
+    ul {
+      width: 100%;
+    }
+  
+    ul li {
+      font-size: 14px;
+    }
+  
+    footer {
+      height: 100px;
+    }
+  
+    footer i {
+      font-size: 16px;
+    }
+  }
+  
