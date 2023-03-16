@@ -52,8 +52,13 @@ form button{
 }
 
 .container{
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 50px;
     min-height: 100%;
+    z-index: 1;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 ul{
@@ -97,16 +102,19 @@ ul li span{
     background: rgb(241, 73, 73);
 }
 
+
 footer{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     align-items: center;
-    position: fixed;
+    text-align: center;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: 60px;
     background-color: #b99e7e;
     color: #fff;
+    z-index: 0;
 }
 
 footer i{
@@ -155,11 +163,11 @@ footer i{
     }
   
     footer {
-      height: 100px;
+      height: 40px;
     }
   
     footer i {
-      font-size: 16px;
+      font-size: 20px;
     }
   }
   
