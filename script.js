@@ -2,7 +2,7 @@ const inputText = document.querySelector('#text');
 const addButton = document.querySelector('.add-button');
 const list = document.querySelector('.container ul');
 
-// Render existing tasks from localStorage
+// render existing tasks from localStorage
 window.addEventListener('load', () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   tasks.forEach(task => {
@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
   });
 });
 
-// Add new task to localStorage
+// add new task to localStorage
 addButton.addEventListener('click', (e)=>{
   if(inputText.value != ""){
     e.preventDefault();
@@ -50,7 +50,7 @@ addButton.addEventListener('click', (e)=>{
   inputText.value = "";
 });
 
-// Update completion status in localStorage
+// update completion status in localStorage
 list.addEventListener('change', (e) => {
   if (e.target.classList.contains('completed')) {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -60,7 +60,7 @@ list.addEventListener('change', (e) => {
   }
 });
 
-// Remove task from localStorage
+// remove task from localStorage
 list.addEventListener('click', (e) => {
   if (e.target.tagName === 'SPAN') {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];

@@ -122,10 +122,10 @@ footer i{
     color: black;
 }
 
-/* Media queries for different screen sizes */
+/* media queries for different screen sizes */
 
 @media only screen and (max-width: 768px) {
-    /* Responsive styles for screens smaller than 768px (e.g. tablets) */
+    /* responsive styles for screens smaller than 768px (e.g. tablets) */
     .container {
       width: 80%;
     }
@@ -148,7 +148,7 @@ footer i{
   }
   
   @media only screen and (max-width: 480px) {
-    /* Responsive styles for screens smaller than 480px (e.g. mobile phones) */
+    /* responsive styles for screens smaller than 480px (e.g. mobile phones) */
     .container {
       width: 90%;
     }
