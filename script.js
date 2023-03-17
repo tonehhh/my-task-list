@@ -20,6 +20,12 @@ window.addEventListener('load', () => {
     const mySpan = document.createElement('span');
     mySpan.innerHTML = 'X';
     myLi.appendChild(mySpan);
+
+    if(myInput.checked){
+        myLi.style.textDecoration = "line-through";
+    } else {
+        myLi.style.textDecoration = "none";
+    }
   });
 });
 
@@ -57,6 +63,12 @@ list.addEventListener('change', (e) => {
     const index = [...list.children].indexOf(e.target.parentElement);
     tasks[index].completed = e.target.checked;
     localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    if(e.target.checked){
+        e.target.parentElement.style.textDecoration = "line-through";
+    } else {
+        e.target.parentElement.style.textDecoration = "none";
+    }
   }
 });
 
