@@ -1,89 +1,92 @@
-const inputText = document.querySelector('#text');
-const addTask = document.querySelector('.add-task');
-const list = document.querySelector('.container ul');
+const inputText = document.querySelector("#text");
+const addButton = document.querySelector(".add-task");
+const list = document.querySelector(".container ul");
 
 // render existing tasks from localStorage
-window.addEventListener('load', () => {
-  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  tasks.forEach(task => {
-    const myLi = document.createElement('li');
-    myLi.className = "task";
-    myLi.innerHTML = task.text;
-    list.appendChild(myLi);
+window.addEventListener("load", () => {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  tasks.forEach((task) => {
+    const listItem = document.createElement("li");
+    listItem.className = "task";
+    listItem.textContent = task.text;
+    list.appendChild(listItem);
 
-    const myInput = document.createElement('input');
-    myInput.type = "checkbox";
-    myInput.className = "completed";
-    myInput.checked = task.completed;
-    myLi.appendChild(myInput);
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "completed";
+    checkbox.checked = task.completed;
+    listItem.appendChild(checkbox);
 
-    const mySpan = document.createElement('span');
-    mySpan.innerHTML = 'X';
-    myLi.appendChild(mySpan);
+    const deleteSpan = document.createElement("span");
+    deleteSpan.textContent = "X";
+    listItem.appendChild(deleteSpan);
 
-    if(myInput.checked){
-        myLi.style.textDecoration = "line-through";
+    if (checkbox.checked) {
+      listItem.style.textDecoration = "line-through";
     } else {
-        myLi.style.textDecoration = "none";
+      listItem.style.textDecoration = "none";
     }
   });
 });
 
 // add new task to localStorage
-addTask.addEventListener('click', (e)=>{
-  if(inputText.value != ""){
-    e.preventDefault();
+function addTaskToLocalStorage() {
+  if (inputText.value.trim() !== "") {
+    const listItem = document.createElement("li");
+    listItem.className = "task";
+    listItem.textContent = inputText.value.trim();
+    list.appendChild(listItem);
 
-    const myLi = document.createElement('li');
-    myLi.className = "task";
-    myLi.innerHTML = inputText.value;
-    list.appendChild(myLi);
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "completed";
+    listItem.appendChild(checkbox);
 
-    const myInput = document.createElement('input');
-    myInput.type = "checkbox";
-    myInput.className = "completed";
-    myLi.appendChild(myInput);
+    const deleteSpan = document.createElement("span");
+    deleteSpan.textContent = "X";
+    listItem.appendChild(deleteSpan);
 
-    const mySpan = document.createElement('span');
-    mySpan.innerHTML = 'X';
-    myLi.appendChild(mySpan);
-
-    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    tasks.push({ text: inputText.value, completed: false });
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    tasks.push({ text: inputText.value.trim(), completed: false });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }
 
   inputText.value = "";
+}
+
+addButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  addTaskToLocalStorage();
 });
 
 // update completion status in localStorage
-list.addEventListener('change', (e) => {
-  if (e.target.classList.contains('completed')) {
-    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+list.addEventListener("change", (e) => {
+  if (e.target.classList.contains("completed")) {
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const index = [...list.children].indexOf(e.target.parentElement);
     tasks[index].completed = e.target.checked;
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 
-    if(e.target.checked){
-        e.target.parentElement.style.textDecoration = "line-through";
+    if (e.target.checked) {
+      e.target.parentElement.style.textDecoration = "line-through";
     } else {
-        e.target.parentElement.style.textDecoration = "none";
+      e.target.parentElement.style.textDecoration = "none";
     }
   }
 });
 
 // remove task from localStorage
-list.addEventListener('click', (e) => {
-  if (e.target.tagName === 'SPAN') {
-    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+list.addEventListener("click", (e) => {
+  if (e.target.tagName === "SPAN") {
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const index = [...list.children].indexOf(e.target.parentElement);
     tasks.splice(index, 1);
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 
     e.target.parentElement.style.opacity = 0;
-    setTimeout(() =>{
+    setTimeout(() => {
       e.target.parentElement.style.display = "none";
       e.target.parentElement.remove();
-    },500);
+    }, 500);
   }
 });

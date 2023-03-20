@@ -1,172 +1,177 @@
 *{
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* set the background to a linear gradient with two colors */
 body{
-    min-height: 100vh;
-    background:linear-gradient(60deg, rgb(223, 223, 223), rgb(222, 173, 117));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-height: 100vh;
+  background:linear-gradient(60deg, rgb(223, 223, 223), rgb(222, 173, 117));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* set the styles for the header */
 h1{
-    color: rgb(0, 0, 0);
-    margin-top: 100px;
-    text-align: center;
+  color: rgb(0, 0, 0);
+  margin-top: 100px;
+  text-align: center;
 }
 
 h2{
-    color:rgb(0, 0, 0);
-    margin-top: 5px;
-    text-align: center;
+  color:rgb(0, 0, 0);
+  margin-top: 5px;
+  text-align: center;
 }
 
+/* set the styles for the task input form */
 form{
-    margin-top: 50px;
-    background: rgb(255, 255, 255);
-    box-shadow: 3px 3px 5px rgb(51, 51, 51);
+  margin-top: 50px;
+  background: rgb(255, 255, 255);
+  box-shadow: 3px 3px 5px rgb(51, 51, 51);
 }
 
 form input{
-    width: 250px;
-    height: 35px;
-    border: none;
-    outline: none;
-    padding: 0 5px;
-    font-weight: bold;
+  width: 250px;
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  font-weight: bold;
 }
 
 form button{
-    width: 50px;
-    height: 35px;
-    border: none;
-    background: rgb(83, 184, 83);
-    color: rgb(51, 51, 51);
-    outline: none;
-    cursor: pointer;
+  width: 50px;
+  height: 35px;
+  border: none;
+  background: rgb(83, 184, 83);
+  color: rgb(51, 51, 51);
+  outline: none;
+  cursor: pointer;
 }
 
+/* set the styles for the task list container */
 .container{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    min-height: 100%;
-    z-index: 1;
-    position: relative;
-    padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  min-height: 100%;
+  z-index: 1;
+  position: relative;
+  padding-bottom: 20px;
 }
 
 ul{
-    list-style: none;
-    width: 500px;
+  list-style: none;
+  width: 500px;
 }
 
 ul li{
-    width: 100%;
-    background:rgb(255, 255, 255);
-    height: 35px;
-    line-height: 35px;
-    font-weight: bold;
-    padding: 0 5px;
-    position: relative;
-    display: block;
-    margin: 7px 0;
-    box-shadow: 3px 3px 5px rgb(51, 51, 51);
-    transition: 0.5s linear;
-    text-align: center;
+  width: 100%;
+  background:rgb(255, 255, 255);
+  height: 35px;
+  line-height: 35px;
+  font-weight: bold;
+  padding: 0 5px;
+  position: relative;
+  display: block;
+  margin: 7px 0;
+  box-shadow: 3px 3px 5px rgb(51, 51, 51);
+  transition: 0.5s linear;
+  text-align: center;
 }
 
+/* set the styles for the completed checkbox */
 .completed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 35px;
-    width: 35px;
-    cursor: pointer;
-    background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  background-color: black;
 }
 
+/* set the styles for the delete button */
 ul li span{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    text-align: center;
-    font-weight: bolder;
-    cursor: pointer;
-    background: rgb(241, 73, 73);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  text-align: center;
+  font-weight: bolder;
+  cursor: pointer;
+  background: rgb(241, 73, 73);
 }
 
-
+/* set the styles for the footer */
 footer{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    text-align: center;
-    position:relative;
-    margin-top: auto;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #b99e7e;
-    color: #fff;
-    z-index: 0;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  text-align: center;
+  position:relative;
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #b99e7e;
+  color: #fff;
+  z-index: 0;
 }
 
+/* set the styles for the social media icons in the footer */
 footer i{
-    font-size: 24px;
-    color: black;
+  font-size: 24px;
+  color: black;
 }
 
 /* media queries for different screen sizes */
-
 @media only screen and (max-width: 768px) {
-    /* responsive styles for screens smaller than 768px (e.g. tablets) */
-    .container {
-      width: 80%;
-    }
-  
-    ul {
-      width: 100%;
-    }
-  
-    ul li {
-      font-size: 16px;
-    }
-  
-    footer {
-      height: 80px;
-    }
-  
-    footer i {
-      font-size: 20px;
-    }
+  /* responsive styles for screens smaller than 768px (e.g. tablets) */
+  .container {
+    width: 80%;
   }
-  
-  @media only screen and (max-width: 480px) {
-    /* responsive styles for screens smaller than 480px (e.g. mobile phones) */
-    .container {
-      width: 90%;
-    }
-  
-    ul {
-      width: 100%;
-    }
-  
-    ul li {
-      font-size: 14px;
-    }
-  
-    footer {
-      height: 40px;
-    }
-  
-    footer i {
-      font-size: 20px;
-    }
+
+  ul {
+    width: 100%;
   }
-  
+
+  ul li {
+    font-size: 16px;
+  }
+
+  footer {
+    height: 80px;
+  }
+
+  footer i {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* responsive styles for screens smaller than 480px (e.g. mobile phones) */
+  .container {
+    width: 90%;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+
+  footer {
+    height: 40px;
+  }
+
+  footer i {
+    font-size: 20px;
+  }
+}
