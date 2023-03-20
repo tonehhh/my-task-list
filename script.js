@@ -1,5 +1,5 @@
 const inputText = document.querySelector('#text');
-const addTaskButton = document.querySelector('.add-task-button');
+const addTask = document.querySelector('.add-task');
 const list = document.querySelector('.container ul');
 
 // render existing tasks from localStorage
@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
 });
 
 // add new task to localStorage
-addTaskButton.addEventListener('click', (e)=>{
+addTask.addEventListener('click', (e)=>{
   if(inputText.value != ""){
     e.preventDefault();
 
