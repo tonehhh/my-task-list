@@ -7,7 +7,7 @@ In addition to basic task management functions, "My Task List" allows users to s
 
 Overall, "My Task List" is a basic yet efficient application for anyone trying to better manage their responsibilities. This tool can help you remain on top of your tasks and reach your goals with ease, whether you're a student, professional, or just someone trying to stay organized.
 
-[Website Preview](./assets/readme%20images/website-preview.png)
+![Website Preview](./assets/readme%20images/website-preview.png)
 
 ## Features
 
