@@ -7,19 +7,19 @@ One of the significant benefits of "My Task List" is its ability to save the use
 
 ![Website Preview](./assets/website-preview.png)
 
-## Features
+# Features
 
-- ### Task Input Field
+## Task Input Field
 ![Task Input Field](./assets/task-input-field.png)
 
-    - Provides an input field for adding new tasks: Users can add new tasks to their to-do list by typing them into the input field and clicking the "Add" button. The code checks that the input is not empty before adding the new task to the list.
+- Provides an input field for adding new tasks: Users can add new tasks to their to-do list by typing them into the input field and clicking the "Add" button. The code checks that the input is not empty before adding the new task to the list.
 
-    - Renders existing tasks from local storage: When the page loads, the code checks if there are any tasks stored in local storage. If there are, it renders them in the task list.
 
-    - Displays tasks in a container with a checkbox and delete button for each item: Tasks are displayed in a container with a white background and a shadow effect. Each task is displayed as a list item with a checkbox on the left and a delete button on the right.
+## Task Section
+![Tasks Section](./assets/task-section.png)
+- Displays tasks in a container with a checkbox and delete button for each item: Tasks are displayed in a container with a white background and a shadow effect. Each task is displayed as a list item with a checkbox on the left and a delete button on the right.
 
-    - Allows users to mark tasks as complete or incomplete with a line-through decoration: When a user checks a task as complete, it is displayed with a line-through decoration. When a user unchecks a completed task, the line-through decoration is removed.
+-  Allows users to mark tasks as complete or incomplete with a line-through decoration: When a user checks a task as complete, it is displayed with a line-through decoration. When a user unchecks a completed task, the line-through decoration is removed.
 
-    - Allows users to delete tasks with a fade-out animation, which also removes them from local storage: When a user clicks on the delete button, the task is removed from the list and also from local storage. The delete button has an animation that fades out the task before removing it from the list.
+- Allows users to delete tasks with a fade-out animation, which also removes them from local storage: When a user clicks on the delete button, the task is removed from the list and also from local storage. The delete button has an animation that fades out the task before removing it from the list.
 
-    - Provides a simple yet effective way for users to manage their to-do list: The overall design of the code is simple and easy to use, allowing users to quickly add, complete, and delete tasks from their to-do list. The use of local storage ensures that tasks persist between page refreshes.
