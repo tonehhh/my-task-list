@@ -26,3 +26,47 @@ One of the significant benefits of "My Task List" is its ability to save the use
 ## Local Storage
 ![Local Storage](./assets/local-storage.png)
 - Another feature is the use of localStorage to ensure that tasks are saved even if the user closes the browser window. This means that users don't have to worry about losing their task list or starting over from scratch every time they close their browser. The use of localStorage is an excellent feature that makes the task list more convenient for users, ensuring that their work is saved and accessible at all times.
+
+## Footer
+![Footer](./assets/footer.png)
+- Links to social media sites are also provided to users to the appropriate channels for updates and information via Twitter, Facebook and Instagram.
+
+## Testing
+- I've tested the page and everything works fine on different browsers such as Chrome, Brave and Safari.
+- I can also confirm the responsiveness looks good on mobile devices, tablets and desktop screens alike.
+- All of the content of the web app is clear and readable.
+
+### Bugs
+- ##### Solved Bugs
+    - When i first deployed my project to GitHub I noticed that my project was broken, none of the CSS was working.
+    - I realised I had used an absolute file path was causing the issue like below
+- #### Accessibility
+    - When I first did the lighthouse test, the web app recieved a low Accessibility score of 70.
+    - The primary issue was due to 
+  
+
+#### Validator Testing
+- ##### HTML
+    - No errors were found when testing through the official W3C validator.
+- ##### CSS
+    - No errors were found when testing through the official Jigsaw validator.
+- #### Javascript
+    - No errors were found when testing through JShint.
+
+![Lighthouse Score](./assets/lighthouse-score.png)
+
+
+
+#### Unfixed Bugs
+- No unfixed bugs
+
+## Deployment
+- The site was deployed to GitHub pages in the GitHub repository via the Settings Tab
+- From the source section drop-down menu then selected the Main Branch
+- Once the master main branch was selected, a link to the completed site was provided.
+## Acknowledgements
+
+ #### Content
+ - The overall project inspiration I got from Youtube videos such as 1 & 2
+
+

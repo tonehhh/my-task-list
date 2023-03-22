@@ -29,6 +29,8 @@ h2{
 
 /* set the styles for the task input form */
 form{
+  display:flex;
+  align-items: center;
   margin-top: 50px;
   background: rgb(255, 255, 255);
   box-shadow: 3px 3px 5px rgb(51, 51, 51);
@@ -42,6 +44,14 @@ form input{
   padding: 0 5px;
   font-weight: bold;
 }
+
+form label {
+  font-size: small;
+  padding-left: 15px;
+  font-weight: bold;
+  color: rgb(202, 202, 202);
+}
+
 
 form button{
   width: 50px;
