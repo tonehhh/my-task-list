@@ -43,9 +43,6 @@ One of the significant benefits of "My Task List" is its ability to save the use
 - All of the content of the web app is clear and readable.
 
 ### Bugs
-- ##### Solved Bugs
-    - When i first deployed my project to GitHub I noticed that my project was broken, none of the CSS was working.
-    - I realised I had used an absolute file path was causing the issue like below
 - #### Accessibility
     - When I first did the lighthouse test, the web app recieved a low Accessibility score of 70.
     - The primary issue was due to the button and form elements not having appropriate labels, which was a quick fix.
@@ -70,6 +67,7 @@ One of the significant benefits of "My Task List" is its ability to save the use
 - The site was deployed to GitHub pages in the GitHub repository via the Settings Tab
 - From the source section drop-down menu then selected the Main Branch
 - Once the master main branch was selected, a link to the completed site was provided.
+
 ## Acknowledgements
 
  #### Content
