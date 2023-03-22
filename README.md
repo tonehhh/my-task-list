@@ -67,6 +67,6 @@ One of the significant benefits of "My Task List" is its ability to save the use
 ## Acknowledgements
 
  #### Content
- - The overall project inspiration I got from Youtube videos such as 1 & 2
+ - The overall project inspiration I got from Youtube videos such as [dcode](https://www.youtube.com/watch?v=cijPd-TXPn4&t=724s) & [Dev A.T Viet Nam](https://www.youtube.com/watch?v=UZ13lvJYPr8&t=20s)
 
 

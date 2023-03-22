@@ -3,6 +3,22 @@ const inputText = document.querySelector("#text");
 const addButton = document.querySelector(".add-task");
 const list = document.querySelector(".container ul");
 
+// define an array of gradient color combinations
+const gradients = [
+  ["#f9d29d", "#ffebb7"],
+  ["#d3c7f3", "#f4e4f3"],
+  ["#9ad3bc", "#c1e1bd"],
+  ["#f7d4c6", "#f7b1ab"],
+  ["#f9d5e5", "#f0c1d8"],
+  ["#c0e5ec", "#f8d5e1"],
+];
+
+// generate a random number to select a gradient from the array
+const randomGradient = Math.floor(Math.random() * gradients.length);
+
+// set the gradient as the background of the body element
+document.body.style.background = `linear-gradient(60deg, ${gradients[randomGradient][0]}, ${gradients[randomGradient][1]})`;
+
 // render existing tasks from localStorage
 window.addEventListener("load", () => {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
